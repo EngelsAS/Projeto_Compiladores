@@ -1,0 +1,18 @@
+10 + 11;
+3 + 4;
+var * 4.5;
+
+#Precedência de operadores
+3 + 5 * 2;
+(3 + 2) * (5 - 1);
+
+#Expoentes
+2 ^ 3;
+5 + 3 * 5 ^ 4 ^ 2;
+
+#Números negativos
+-4 * -8;
+-(3 + 2) * 5;
+
+#Expressões complexas
+((2 + 3) * 4) / (6 - 3);

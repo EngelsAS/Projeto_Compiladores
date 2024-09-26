@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Built-By: Johnny
+Build-Jdk: 23
+Main-Class: com.uepb.Main
+Created-By: Maven Integration for Eclipse
+
