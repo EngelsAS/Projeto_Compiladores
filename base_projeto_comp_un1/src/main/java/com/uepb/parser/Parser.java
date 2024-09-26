@@ -81,14 +81,12 @@ public class Parser {
 //    fator: (OPSUM | OPSUB)? (INT | FLOAT | ID | LPAREN expr RPAREN);
     private void fator() throws IOException {
         var la = tokenBuffer.lookAhead(1);
-
-        // Verifica se o próximo token é um operador unário (+ ou -)
+        
         if (la.type() == TokenType.OPSUM || la.type() == TokenType.OPSUB) {
-            match(la.type()); // Consome o operador unário
+            match(la.type()); 
         }
-
-        // Depois de consumir o operador, verifica o tipo de token esperado
-        la = tokenBuffer.lookAhead(1); // Atualiza o lookahead após consumir o operador
+  
+        la = tokenBuffer.lookAhead(1); 
         switch (la.type()) {
             case INT:
                 match(TokenType.INT);  
@@ -111,12 +109,12 @@ public class Parser {
     }
     
     private void match(TokenType expected) throws IOException {
-        var la = tokenBuffer.lookAhead(1); // Olha o token atual
+        var la = tokenBuffer.lookAhead(1);
         if (la.type() == expected) {
-            System.out.println("Token aceito: " + la); // Token aceito
+            System.out.println("Token aceito: " + la);
             tokenBuffer.confirmToken(); // Avança para o próximo token
         } else {
-            throw new SyntaxError(la, expected); // Erro de sintaxe se não for o token esperado
+            throw new SyntaxError(la, expected);
         }
     }
 
